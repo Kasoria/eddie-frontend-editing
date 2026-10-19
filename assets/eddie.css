@@ -1,0 +1,483 @@
+/* Eddie – frontend editor. Everything is scoped to [data-eddie-ui] or to elements Eddie marked. */
+
+#eddie-root {
+	--eddie-ink: #14171f;
+	--eddie-paper: #ffffff;
+	--eddie-line: #d9dde5;
+	--eddie-accent: #2f5bea;
+	--eddie-accent-ink: #ffffff;
+	--eddie-warn: #b45309;
+	--eddie-danger: #b91c1c;
+	--eddie-pending: #7c3aed;
+	--eddie-radius: 10px;
+}
+
+#eddie-root,
+#eddie-root * {
+	box-sizing: border-box;
+}
+
+#eddie-root [hidden] {
+	display: none !important;
+}
+
+#eddie-root .eddie-bar,
+#eddie-root .eddie-panel,
+#eddie-root .eddie-chip,
+#eddie-root .eddie-popover,
+#eddie-root .eddie-toolbar,
+#eddie-root .eddie-toast {
+	font: 14px/1.4 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	color: var(--eddie-ink);
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+/* Bar */
+
+#eddie-root .eddie-bar {
+	position: fixed;
+	z-index: 2147483000;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	width: max-content;
+	max-width: calc(100vw - 24px);
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	padding: 5px;
+	background: var(--eddie-ink);
+	border-radius: 14px;
+	box-shadow: 0 10px 30px rgba(10, 14, 25, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+}
+
+#eddie-root .eddie-bar:not(.eddie-is-editing) .eddie-only-editing {
+	display: none;
+}
+
+#eddie-root .eddie-bar.eddie-busy {
+	opacity: 0.7;
+	pointer-events: none;
+}
+
+#eddie-root .eddie-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 7px;
+	height: 36px;
+	margin: 0;
+	padding: 0 14px;
+	font: inherit;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1;
+	white-space: nowrap;
+	color: var(--eddie-ink);
+	text-decoration: none;
+	background: var(--eddie-paper);
+	border: 0;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.12s ease;
+}
+
+#eddie-root .eddie-btn:hover {
+	background: #e9edf5;
+}
+
+#eddie-root .eddie-btn:focus-visible {
+	outline: 2px solid #9db8ff;
+	outline-offset: 2px;
+}
+
+#eddie-root .eddie-btn-primary {
+	color: var(--eddie-accent-ink);
+	background: var(--eddie-accent);
+}
+
+#eddie-root .eddie-btn-primary:hover {
+	background: #234ad0;
+}
+
+#eddie-root .eddie-btn[disabled] {
+	color: rgba(255, 255, 255, 0.55);
+	background: rgba(255, 255, 255, 0.12);
+	cursor: default;
+}
+
+/* Secondary actions: quiet icon buttons on the dark bar. */
+#eddie-root .eddie-btn-ghost {
+	min-width: 36px;
+	padding: 0 9px;
+	color: rgba(255, 255, 255, 0.86);
+	background: transparent;
+}
+
+#eddie-root .eddie-btn-ghost:hover {
+	color: #fff;
+	background: rgba(255, 255, 255, 0.14);
+}
+
+#eddie-root .eddie-icon {
+	display: inline-flex;
+}
+
+#eddie-root .eddie-count {
+	min-width: 20px;
+	padding: 2px 6px;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 16px;
+	text-align: center;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.18);
+}
+
+#eddie-root .eddie-btn-small {
+	height: 28px;
+	padding: 0 10px;
+	margin-left: 10px;
+}
+
+/* Fields panel */
+
+#eddie-root .eddie-panel {
+	position: fixed;
+	z-index: 2147483000;
+	right: 16px;
+	bottom: 72px;
+	width: min(340px, calc(100vw - 32px));
+	max-height: min(60vh, 520px);
+	padding: 14px;
+	overflow: auto;
+	background: var(--eddie-paper);
+	border: 1px solid var(--eddie-line);
+	border-radius: var(--eddie-radius);
+	box-shadow: 0 12px 36px rgba(10, 14, 25, 0.2);
+}
+
+#eddie-root .eddie-panel h2 {
+	margin: 0 0 8px;
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: #5a6272;
+}
+
+#eddie-root .eddie-panel ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#eddie-root .eddie-field {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 8px 10px;
+	text-align: left;
+	font: inherit;
+	color: inherit;
+	background: transparent;
+	border: 0;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+#eddie-root .eddie-field:hover {
+	background: #eef1f7;
+}
+
+#eddie-root .eddie-field-label {
+	display: block;
+	font-weight: 600;
+}
+
+#eddie-root .eddie-field-snippet {
+	display: block;
+	overflow: hidden;
+	font-size: 12px;
+	color: #5a6272;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#eddie-root .eddie-field-readonly .eddie-field-label {
+	color: var(--eddie-warn);
+}
+
+#eddie-root .eddie-panel .eddie-panel-sub {
+	margin-top: 16px;
+	padding-top: 14px;
+	border-top: 1px solid var(--eddie-line);
+}
+
+#eddie-root a.eddie-field {
+	text-decoration: none;
+}
+
+/* Hover chip */
+
+#eddie-root .eddie-chip {
+	position: fixed;
+	z-index: 2147483001;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 10px;
+	align-items: center;
+	max-width: min(420px, calc(100vw - 16px));
+	padding: 6px 10px;
+	font-size: 12px;
+	color: var(--eddie-accent-ink);
+	background: var(--eddie-ink);
+	border-radius: 8px;
+	box-shadow: 0 6px 18px rgba(10, 14, 25, 0.25);
+}
+
+#eddie-root .eddie-chip-note {
+	opacity: 0.8;
+}
+
+#eddie-root .eddie-chip-link {
+	color: #9db8ff;
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+/* Popover (link and choice) */
+
+#eddie-root .eddie-popover {
+	position: fixed;
+	z-index: 2147483002;
+	width: min(320px, calc(100vw - 16px));
+	padding: 14px;
+	background: var(--eddie-paper);
+	border: 1px solid var(--eddie-line);
+	border-radius: var(--eddie-radius);
+	box-shadow: 0 12px 36px rgba(10, 14, 25, 0.25);
+}
+
+#eddie-root .eddie-form label {
+	display: block;
+	margin: 10px 0 4px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #5a6272;
+}
+
+#eddie-root .eddie-form label:first-child {
+	margin-top: 0;
+}
+
+#eddie-root .eddie-form input[type='text'],
+#eddie-root .eddie-form input[type='url'],
+#eddie-root .eddie-form select {
+	width: 100%;
+	height: 38px;
+	margin: 0;
+	padding: 6px 10px;
+	font: inherit;
+	color: var(--eddie-ink);
+	background: #fff;
+	border: 1px solid #b7bdcb;
+	border-radius: 8px;
+}
+
+#eddie-root .eddie-form .eddie-check {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-weight: 500;
+}
+
+#eddie-root .eddie-note {
+	margin: 10px 0 0;
+	font-size: 12px;
+	color: #5a6272;
+}
+
+#eddie-root .eddie-actions {
+	display: flex;
+	gap: 8px;
+	margin-top: 14px;
+}
+
+#eddie-root .eddie-actions .eddie-btn {
+	box-shadow: inset 0 0 0 1px var(--eddie-line);
+}
+
+#eddie-root .eddie-actions .eddie-btn-primary {
+	box-shadow: none;
+}
+
+/* Rich text toolbar */
+
+#eddie-root .eddie-toolbar {
+	position: fixed;
+	z-index: 2147483002;
+	display: flex;
+	gap: 2px;
+	padding: 4px;
+	background: var(--eddie-ink);
+	border-radius: 8px;
+	box-shadow: 0 6px 18px rgba(10, 14, 25, 0.25);
+}
+
+#eddie-root .eddie-tool {
+	min-width: 32px;
+	height: 32px;
+	margin: 0;
+	padding: 0 8px;
+	font: inherit;
+	font-weight: 700;
+	color: var(--eddie-accent-ink);
+	background: transparent;
+	border: 0;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+#eddie-root .eddie-tool:hover {
+	background: rgba(255, 255, 255, 0.16);
+}
+
+#eddie-root .eddie-tool-italic {
+	font-style: italic;
+}
+
+/* Toast */
+
+#eddie-root .eddie-toast {
+	position: fixed;
+	z-index: 2147483003;
+	left: 50%;
+	bottom: 72px;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+	max-width: calc(100vw - 24px);
+	padding: 10px 16px;
+	color: var(--eddie-accent-ink);
+	background: #166534;
+	border-radius: 999px;
+	box-shadow: 0 8px 22px rgba(10, 14, 25, 0.25);
+}
+
+#eddie-root .eddie-toast.eddie-toast-error {
+	background: var(--eddie-danger);
+}
+
+/* Marked elements while editing */
+
+.eddie-editing [data-eddie],
+.eddie-editing [data-eddie-readonly] {
+	outline: 1px dashed rgba(47, 91, 234, 0.45);
+	outline-offset: 3px;
+	cursor: text;
+	transition: outline-color 0.15s ease, background-color 0.15s ease;
+}
+
+.eddie-editing [data-eddie-type='image'],
+.eddie-editing [data-eddie-type='gallery'],
+.eddie-editing [data-eddie-type='link'],
+.eddie-editing [data-eddie-type='choice'] {
+	cursor: pointer;
+}
+
+.eddie-editing [data-eddie]:hover,
+.eddie-editing [data-eddie]:focus {
+	outline: 2px solid #2f5bea;
+	background-color: rgba(47, 91, 234, 0.06);
+}
+
+.eddie-editing [data-eddie-readonly] {
+	outline-color: rgba(180, 83, 9, 0.5);
+	outline-style: dotted;
+	cursor: help;
+}
+
+.eddie-editing [data-eddie-readonly]:hover {
+	outline: 2px dotted #b45309;
+}
+
+.eddie-editing [data-eddie].eddie-dirty {
+	outline: 2px solid #16a34a;
+}
+
+.eddie-editing [data-eddie].eddie-is-pending {
+	outline: 2px solid #7c3aed;
+}
+
+.eddie-editing [data-eddie].eddie-error {
+	outline: 2px solid #b91c1c;
+	background-color: rgba(185, 28, 28, 0.08);
+}
+
+.eddie-editing .eddie-flash {
+	animation: eddie-flash 1.4s ease;
+}
+
+/* Target of a link from the change log; visible with editing switched on or off. */
+.eddie-focus {
+	outline: 4px solid #2f5bea !important;
+	outline-offset: 6px;
+	border-radius: 4px;
+	animation: eddie-focus-pulse 1.2s ease-in-out 3;
+}
+
+@keyframes eddie-focus-pulse {
+	50% {
+		outline-color: #9db4ff;
+		outline-offset: 12px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.eddie-focus {
+		animation: none;
+	}
+}
+
+@keyframes eddie-flash {
+	0%,
+	60% {
+		outline: 4px solid #2f5bea;
+		outline-offset: 6px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.eddie-editing .eddie-flash {
+		animation: none;
+		outline: 4px solid #2f5bea;
+	}
+}
+
+@media (max-width: 600px) {
+	#eddie-root .eddie-bar {
+		bottom: 10px;
+	}
+
+	#eddie-root .eddie-btn {
+		padding: 0 11px;
+	}
+
+	#eddie-root .eddie-panel {
+		right: 8px;
+		bottom: 64px;
+	}
+
+	#eddie-root .eddie-toast {
+		bottom: 64px;
+	}
+}
+
+/* Only the image list is saved, so the shortcode options of WordPress' gallery editor are hidden. */
+.eddie-gallery-frame .media-sidebar .gallery-settings,
+.eddie-gallery-frame .media-sidebar .collection-settings {
+	display: none;
+}

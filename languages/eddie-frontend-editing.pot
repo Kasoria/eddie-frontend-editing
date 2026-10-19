@@ -1,0 +1,677 @@
+# Copyright (C) 2026 Kasoria
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Eddie – Frontend Editing for Clients 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/eddie-frontend-editing\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-18T15:11:35+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: eddie-frontend-editing\n"
+
+#. Plugin Name of the plugin
+#: eddie-wp.php
+msgid "Eddie – Frontend Editing for Clients"
+msgstr ""
+
+#. Description of the plugin
+#: eddie-wp.php
+msgid "Lets a dedicated user or role edit texts, images and custom fields directly on the website while logged in. Works with Gutenberg, Bricks and ACF; everything else links straight to the right place in the backend."
+msgstr ""
+
+#. Author of the plugin
+#: eddie-wp.php
+msgid "Kasoria"
+msgstr ""
+
+#: includes/class-access.php:45
+msgid "Client Editor"
+msgstr ""
+
+#: includes/class-access.php:129
+msgid "Eddie frontend editing"
+msgstr ""
+
+#: includes/class-access.php:132
+msgid "Frontend editing"
+msgstr ""
+
+#: includes/class-access.php:136
+msgid "Allow this user to edit the website from the frontend"
+msgstr ""
+
+#: includes/class-admin.php:28
+#: includes/class-admin.php:29
+msgid "Eddie"
+msgstr ""
+
+#: includes/class-admin.php:37
+#: includes/class-admin.php:56
+msgid "Settings"
+msgstr ""
+
+#: includes/class-admin.php:55
+msgid "Changes"
+msgstr ""
+
+#: includes/class-admin.php:65
+msgid "Eddie – frontend editing"
+msgstr ""
+
+#: includes/class-admin.php:91
+msgid "When someone saves"
+msgstr ""
+
+#: includes/class-admin.php:93
+msgid "Publish changes immediately (with undo and a change log)"
+msgstr ""
+
+#: includes/class-admin.php:94
+msgid "Hold changes until an administrator approves them"
+msgstr ""
+
+#: includes/class-admin.php:98
+msgid "Content sources"
+msgstr ""
+
+#: includes/class-admin.php:105
+msgid "not installed"
+msgstr ""
+
+#: includes/class-admin.php:109
+msgid "Everything else on a page links to the right place in the backend."
+msgstr ""
+
+#: includes/class-admin.php:113
+msgid "Who can edit"
+msgstr ""
+
+#: includes/class-admin.php:125
+msgid "You can also allow single users on their profile page."
+msgstr ""
+
+#: includes/class-admin.php:129
+msgid "Client Editor role"
+msgstr ""
+
+#: includes/class-admin.php:133
+msgid "Keep Client Editors out of most of the dashboard (they can still open edit screens, the media library and their profile)"
+msgstr ""
+
+#: includes/class-admin.php:145
+#: includes/class-admin.php:330
+msgid "You are not allowed to do this."
+msgstr ""
+
+#: includes/class-admin.php:164
+msgid "Settings saved."
+msgstr ""
+
+#: includes/class-admin.php:175
+#: includes/class-frontend.php:155
+msgid "Waiting for approval"
+msgstr ""
+
+#: includes/class-admin.php:176
+msgid "Published"
+msgstr ""
+
+#: includes/class-admin.php:177
+msgid "Undone"
+msgstr ""
+
+#: includes/class-admin.php:178
+msgid "Rejected"
+msgstr ""
+
+#: includes/class-admin.php:179
+msgid "Everything"
+msgstr ""
+
+#: includes/class-admin.php:210
+msgid "Date"
+msgstr ""
+
+#: includes/class-admin.php:211
+msgid "Who"
+msgstr ""
+
+#: includes/class-admin.php:212
+msgid "Where"
+msgstr ""
+
+#: includes/class-admin.php:213
+msgid "Before"
+msgstr ""
+
+#: includes/class-admin.php:214
+msgid "After"
+msgstr ""
+
+#: includes/class-admin.php:215
+msgid "Status"
+msgstr ""
+
+#: includes/class-admin.php:216
+msgid "Actions"
+msgstr ""
+
+#: includes/class-admin.php:221
+msgid "Nothing here yet."
+msgstr ""
+
+#: includes/class-admin.php:275
+msgid "Show on page"
+msgstr ""
+
+#: includes/class-admin.php:278
+msgid "Open in backend"
+msgstr ""
+
+#: includes/class-admin.php:307
+msgid "Approve"
+msgstr ""
+
+#: includes/class-admin.php:308
+msgid "Reject"
+msgstr ""
+
+#: includes/class-admin.php:310
+msgid "Undo"
+msgstr ""
+
+#: includes/class-admin.php:341
+msgid "Change approved and published."
+msgstr ""
+
+#: includes/class-admin.php:345
+msgid "Change rejected."
+msgstr ""
+
+#: includes/class-admin.php:349
+msgid "Change undone."
+msgstr ""
+
+#: includes/class-admin.php:352
+msgid "Unknown action."
+msgstr ""
+
+#: includes/class-field.php:43
+#: includes/class-field.php:50
+msgid "This field reference is invalid or expired. Please reload the page."
+msgstr ""
+
+#: includes/class-frontend.php:125
+msgid "Edit"
+msgstr ""
+
+#: includes/class-frontend.php:126
+msgid "Editing"
+msgstr ""
+
+#: includes/class-frontend.php:127
+msgid "Done"
+msgstr ""
+
+#: includes/class-frontend.php:128
+msgid "Save"
+msgstr ""
+
+#: includes/class-frontend.php:129
+msgid "Submit for review"
+msgstr ""
+
+#: includes/class-frontend.php:130
+msgid "Saving …"
+msgstr ""
+
+#: includes/class-frontend.php:131
+msgid "Undo last save"
+msgstr ""
+
+#: includes/class-frontend.php:132
+msgid "Fields on this page"
+msgstr ""
+
+#: includes/class-frontend.php:133
+msgid "Nothing on this page can be edited from the frontend."
+msgstr ""
+
+#: includes/class-frontend.php:134
+msgid "Edit in backend"
+msgstr ""
+
+#: includes/class-frontend.php:135
+msgid "Open field in backend"
+msgstr ""
+
+#: includes/class-frontend.php:136
+msgid "Custom field (ACF). Open it in the backend to change it."
+msgstr ""
+
+#: includes/class-frontend.php:137
+msgid "Custom field (ACF)"
+msgstr ""
+
+#: includes/class-frontend.php:138
+msgid "Custom fields (ACF) read on this page"
+msgstr ""
+
+#. translators: 1: number of ACF values read, 2: number found on the page
+#: includes/class-frontend.php:140
+#, php-format
+msgid "ACF: %1$s values read, %2$s found on the page."
+msgstr ""
+
+#: includes/class-frontend.php:141
+msgid "ACF: no field values were read while this page was built."
+msgstr ""
+
+#: includes/class-frontend.php:142
+msgid "Several custom fields share this text, so it cannot be edited here."
+msgstr ""
+
+#: includes/class-frontend.php:143
+msgid "That spot could not be found on this page. It may have been changed or removed since."
+msgstr ""
+
+#: includes/class-frontend.php:144
+msgid "This text has formatting that cannot be kept when editing here. Change it in the backend."
+msgstr ""
+
+#: includes/class-frontend.php:145
+msgid "Edit page in backend"
+msgstr ""
+
+#: includes/class-frontend.php:146
+msgid "Review changes"
+msgstr ""
+
+#: includes/class-frontend.php:147
+msgid "unsaved changes"
+msgstr ""
+
+#: includes/class-frontend.php:148
+msgid "unsaved change"
+msgstr ""
+
+#: includes/class-frontend.php:149
+msgid "Saved."
+msgstr ""
+
+#: includes/class-frontend.php:150
+msgid "Submitted for review."
+msgstr ""
+
+#: includes/class-frontend.php:151
+msgid "Nothing to save."
+msgstr ""
+
+#: includes/class-frontend.php:152
+msgid "Reverted."
+msgstr ""
+
+#: includes/class-frontend.php:153
+msgid "Saved. Reload the page to see the result."
+msgstr ""
+
+#: includes/class-frontend.php:154
+msgid "Reload"
+msgstr ""
+
+#: includes/class-frontend.php:156
+msgid "Shared element: this appears on several pages."
+msgstr ""
+
+#: includes/class-frontend.php:157
+msgid "Filled in automatically. Change it in the backend."
+msgstr ""
+
+#: includes/class-frontend.php:158
+msgid "Choose image"
+msgstr ""
+
+#: includes/class-frontend.php:159
+msgid "Change image"
+msgstr ""
+
+#: includes/class-frontend.php:160
+msgid "Remove image"
+msgstr ""
+
+#: includes/class-frontend.php:161
+#: includes/sources/class-acf.php:460
+#: includes/sources/class-acf.php:461
+#: includes/sources/class-bricks.php:225
+#: includes/sources/class-bricks.php:450
+msgid "Text"
+msgstr ""
+
+#: includes/class-frontend.php:162
+msgid "Link address"
+msgstr ""
+
+#: includes/class-frontend.php:163
+msgid "Open in a new tab"
+msgstr ""
+
+#: includes/class-frontend.php:164
+msgid "The link address is set dynamically and can only be changed in the backend."
+msgstr ""
+
+#: includes/class-frontend.php:165
+msgid "Apply"
+msgstr ""
+
+#: includes/class-frontend.php:166
+msgid "Cancel"
+msgstr ""
+
+#: includes/class-frontend.php:167
+msgid "Bold"
+msgstr ""
+
+#: includes/class-frontend.php:168
+msgid "Italic"
+msgstr ""
+
+#: includes/class-frontend.php:169
+msgid "Link"
+msgstr ""
+
+#: includes/class-frontend.php:170
+msgid "Bulleted list"
+msgstr ""
+
+#: includes/class-frontend.php:171
+msgid "Numbered list"
+msgstr ""
+
+#: includes/class-frontend.php:172
+msgid "Link address (leave empty to remove)"
+msgstr ""
+
+#: includes/class-frontend.php:173
+msgid "Something went wrong."
+msgstr ""
+
+#: includes/class-frontend.php:174
+msgid "You have unsaved changes. Leave without saving?"
+msgstr ""
+
+#: includes/class-frontend.php:175
+#: includes/sources/class-acf.php:309
+msgid "On"
+msgstr ""
+
+#: includes/class-frontend.php:176
+#: includes/sources/class-acf.php:310
+msgid "Off"
+msgstr ""
+
+#: includes/class-frontend.php:177
+msgid "Close"
+msgstr ""
+
+#: includes/class-service.php:68
+msgid "The change could not be stored."
+msgstr ""
+
+#: includes/class-service.php:131
+#: includes/class-service.php:174
+msgid "This change is no longer pending."
+msgstr ""
+
+#: includes/class-service.php:136
+msgid "The content source for this change is not available."
+msgstr ""
+
+#: includes/class-service.php:141
+#: includes/class-service.php:204
+#: includes/class-service.php:249
+msgid "You are not allowed to change this content."
+msgstr ""
+
+#: includes/class-service.php:195
+msgid "This change cannot be undone."
+msgstr ""
+
+#: includes/class-service.php:198
+msgid "You can only undo your own changes."
+msgstr ""
+
+#: includes/class-service.php:212
+msgid "This content was changed again after this edit, so it cannot be undone automatically."
+msgstr ""
+
+#: includes/class-service.php:246
+msgid "This kind of content cannot be edited right now."
+msgstr ""
+
+#: includes/class-source.php:79
+msgid "Invalid value."
+msgstr ""
+
+#: includes/class-source.php:92
+msgid "This text is too long."
+msgstr ""
+
+#: includes/class-source.php:110
+msgid "Please enter a number."
+msgstr ""
+
+#: includes/class-source.php:114
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: includes/class-source.php:122
+#: includes/class-source.php:139
+msgid "Please enter a valid web address."
+msgstr ""
+
+#: includes/class-source.php:128
+#: includes/sources/class-bricks.php:526
+#: includes/sources/class-gutenberg.php:269
+msgid "Please choose an image from the media library."
+msgstr ""
+
+#: includes/class-source.php:134
+msgid "Invalid link."
+msgstr ""
+
+#: includes/class-source.php:148
+msgid "Invalid choice."
+msgstr ""
+
+#: includes/class-source.php:150
+msgid "Unsupported field type."
+msgstr ""
+
+#: includes/sources/class-acf.php:31
+msgid "Advanced Custom Fields"
+msgstr ""
+
+#: includes/sources/class-acf.php:400
+#: includes/sources/class-acf.php:432
+#: includes/sources/class-acf.php:448
+msgid "This field no longer exists."
+msgstr ""
+
+#: includes/sources/class-acf.php:406
+msgid "Please pick one of the available options."
+msgstr ""
+
+#: includes/sources/class-acf.php:423
+msgid "This value is not allowed for this field."
+msgstr ""
+
+#: includes/sources/class-acf.php:462
+msgid "Formatted text"
+msgstr ""
+
+#: includes/sources/class-acf.php:463
+msgid "Number"
+msgstr ""
+
+#: includes/sources/class-acf.php:464
+msgid "Email address"
+msgstr ""
+
+#: includes/sources/class-acf.php:465
+msgid "Web address"
+msgstr ""
+
+#: includes/sources/class-acf.php:466
+#: includes/sources/class-bricks.php:275
+#: includes/sources/class-bricks.php:448
+#: includes/sources/class-gutenberg.php:157
+msgid "Image"
+msgstr ""
+
+#: includes/sources/class-acf.php:467
+msgid "Choice"
+msgstr ""
+
+#: includes/sources/class-acf.php:469
+msgid "Field"
+msgstr ""
+
+#: includes/sources/class-bricks.php:50
+msgid "Bricks Builder (heading, text, button, image)"
+msgstr ""
+
+#: includes/sources/class-bricks.php:179
+msgid "Component"
+msgstr ""
+
+#. translators: %s: ACF field label
+#: includes/sources/class-bricks.php:215
+#: includes/sources/class-bricks.php:419
+#, php-format
+msgid "ACF: %s"
+msgstr ""
+
+#: includes/sources/class-bricks.php:225
+#: includes/sources/class-gutenberg.php:151
+msgid "Heading"
+msgstr ""
+
+#: includes/sources/class-bricks.php:257
+#: includes/sources/class-bricks.php:266
+#: includes/sources/class-bricks.php:446
+#: includes/sources/class-gutenberg.php:155
+msgid "Button"
+msgstr ""
+
+#: includes/sources/class-bricks.php:452
+msgid "Heading or text"
+msgstr ""
+
+#: includes/sources/class-bricks.php:572
+msgid "This element no longer exists. Please reload the page."
+msgstr ""
+
+#: includes/sources/class-core.php:23
+msgid "WordPress (title, featured image)"
+msgstr ""
+
+#: includes/sources/class-core.php:123
+msgid "Featured image"
+msgstr ""
+
+#: includes/sources/class-core.php:125
+msgid "Excerpt"
+msgstr ""
+
+#: includes/sources/class-core.php:127
+msgid "Title"
+msgstr ""
+
+#: includes/sources/class-core.php:138
+msgid "The title cannot be empty."
+msgstr ""
+
+#: includes/sources/class-core.php:164
+msgid "The featured image could not be changed."
+msgstr ""
+
+#: includes/sources/class-gutenberg.php:67
+msgid "Gutenberg blocks (paragraph, heading, list, button, image)"
+msgstr ""
+
+#: includes/sources/class-gutenberg.php:153
+msgid "List item"
+msgstr ""
+
+#: includes/sources/class-gutenberg.php:159
+msgid "Paragraph"
+msgstr ""
+
+#: includes/sources/class-gutenberg.php:226
+msgid "This block has a layout Eddie cannot edit safely. Please use the backend."
+msgstr ""
+
+#: includes/sources/class-gutenberg.php:233
+msgid "This button cannot be edited safely. Please use the backend."
+msgstr ""
+
+#: includes/sources/class-gutenberg.php:263
+msgid "Removing an image is not supported here. Please use the backend."
+msgstr ""
+
+#: includes/sources/class-gutenberg.php:273
+msgid "This image block cannot be edited safely. Please use the backend."
+msgstr ""
+
+#: includes/sources/class-gutenberg.php:290
+msgid "Unsupported block."
+msgstr ""
+
+#: includes/sources/class-gutenberg.php:302
+msgid "This block cannot be edited safely."
+msgstr ""
+
+#: includes/sources/class-gutenberg.php:307
+msgid "This button cannot be edited safely."
+msgstr ""
+
+#: includes/sources/class-gutenberg.php:330
+msgid "The page no longer exists."
+msgstr ""
+
+#: includes/sources/class-gutenberg.php:337
+msgid "This content was changed elsewhere in the meantime. Please reload the page and try again."
+msgstr ""
+
+#: includes/class-frontend.php
+msgid "Edit gallery"
+msgstr ""
+
+#: includes/class-frontend.php
+msgid "The gallery editor could not be loaded. Reload the page and try again."
+msgstr ""
+
+#: includes/class-source.php
+msgid "Invalid gallery."
+msgstr ""
+
+#: includes/class-source.php
+msgid "This gallery has too many images."
+msgstr ""
+
+#: includes/class-source.php
+msgid "Please choose images from the media library."
+msgstr ""
+
+#: includes/sources/class-acf.php
+msgid "Gallery"
+msgstr ""
+
+#: includes/class-admin.php
+msgid "Images: %d"
+msgstr ""

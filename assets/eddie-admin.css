@@ -1,0 +1,42 @@
+/* Eddie – field highlight in the backend. */
+
+.acf-field.eddie-acf-highlight {
+	position: relative;
+	outline: 3px solid #2f5bea;
+	outline-offset: 4px;
+	border-radius: 6px;
+	background: rgba(47, 91, 234, 0.07);
+	animation: eddie-acf-pulse 1.6s ease-in-out 3;
+}
+
+.acf-field.eddie-acf-highlight::before {
+	content: 'Eddie';
+	position: absolute;
+	top: -14px;
+	left: 12px;
+	padding: 1px 8px;
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 18px;
+	color: #fff;
+	background: #2f5bea;
+	border-radius: 999px;
+}
+
+@keyframes eddie-acf-pulse {
+	0%,
+	100% {
+		outline-color: #2f5bea;
+		background-color: rgba(47, 91, 234, 0.07);
+	}
+	50% {
+		outline-color: #7c9bff;
+		background-color: rgba(47, 91, 234, 0.2);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.acf-field.eddie-acf-highlight {
+		animation: none;
+	}
+}
